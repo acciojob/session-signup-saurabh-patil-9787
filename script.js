@@ -15,13 +15,15 @@ submitBtn.addEventListener('click',(e)=>{
     let confirmPassword4 = inputConfirmPass.value
     console.log(name1)
 
-    if(password3 !== confirmPassword4){
-        alert("Passwords do not match");
-    }else {
+    if(password3 === confirmPassword4){
+    
         sessionStorage.setItem("username",name1);
         sessionStorage.setItem("useremail",email2);
         sessionStorage.setItem("userPass",password3)
+		
         alert("Sign up successful!")
-    }
+    }else{
+		alert("Passwords do not match")
+	}
 
 })
