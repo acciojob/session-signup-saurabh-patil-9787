@@ -9,17 +9,17 @@ const submitBtn = document.getElementById('submit');
 
 submitBtn.addEventListener('click',(e)=>{
     e.preventDefault()
-    let name1 = inputName.value
-    let email2 = inputEmail.value
-    let password3 = inputPassword.value
-    let confirmPassword4 = inputConfirmPass.value
+    let name = inputName.value
+    let email = inputEmail.value
+    let password = inputPassword.value
+    let confirmPassword = inputConfirmPass.value
     console.log(name1)
 
-    if(password3 === confirmPassword4){
+    if(password === confirmPassword){
     
-        sessionStorage.setItem("username",name1);
-        sessionStorage.setItem("useremail",email2);
-        sessionStorage.setItem("userPass",password3)
+        sessionStorage.setItem("name",name);
+        sessionStorage.setItem("email",email);
+        sessionStorage.setItem("password",password)
 		
         alert("Sign up successful!")
     }else{
